@@ -37,16 +37,18 @@ public class MantenimientoEmpleados extends javax.swing.JFrame {
         txt_buscar = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
         label_status = new javax.swing.JLabel();
-        txt_nombre = new javax.swing.JTextField();
+        txt_nombre_empleado = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        txt_correo = new javax.swing.JTextField();
+        txt_codigo_puesto = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        txt_edad = new javax.swing.JTextField();
+        txt_codigo_departamento = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        txt_celular = new javax.swing.JTextField();
+        txt_sueldo_empleado = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        txt_ID = new javax.swing.JTextField();
+        txt_codigo_empleado = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        txt_estatus_empleado = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -82,21 +84,23 @@ public class MantenimientoEmpleados extends javax.swing.JFrame {
 
         label_status.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
 
-        jLabel4.setText("Correo");
+        jLabel4.setText("Codigo Puesto:");
 
-        jLabel5.setText("Edad:");
+        jLabel5.setText("Codigo Departamento:");
 
-        txt_edad.addActionListener(new java.awt.event.ActionListener() {
+        txt_codigo_departamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_edadActionPerformed(evt);
+                txt_codigo_departamentoActionPerformed(evt);
             }
         });
 
-        jLabel6.setText("Celular");
+        jLabel6.setText("Sueldo Empleado:");
 
-        jLabel1.setText("ID:");
+        jLabel1.setText("Codigo de Empleado:");
 
-        jLabel2.setText("Nombre");
+        jLabel2.setText("Nombre Empleado:");
+
+        jLabel7.setText("Estatus Empleado:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -104,6 +108,21 @@ public class MantenimientoEmpleados extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(label_status)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6)
+                    .addComponent(txt_codigo_empleado, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
+                    .addComponent(txt_nombre_empleado)
+                    .addComponent(txt_codigo_puesto)
+                    .addComponent(txt_codigo_departamento)
+                    .addComponent(txt_sueldo_empleado)
+                    .addComponent(jLabel7)
+                    .addComponent(txt_estatus_empleado))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton1)
@@ -115,19 +134,8 @@ public class MantenimientoEmpleados extends javax.swing.JFrame {
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txt_buscar))
-                    .addComponent(jButton4)
-                    .addComponent(label_status)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6)
-                    .addComponent(txt_ID)
-                    .addComponent(txt_nombre)
-                    .addComponent(txt_correo)
-                    .addComponent(txt_edad)
-                    .addComponent(txt_celular))
-                .addContainerGap(251, Short.MAX_VALUE))
+                    .addComponent(jButton4))
+                .addGap(178, 178, 178))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -135,37 +143,43 @@ public class MantenimientoEmpleados extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txt_ID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_codigo_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txt_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txt_correo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txt_edad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txt_nombre_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_codigo_puesto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txt_codigo_departamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton1)
+                            .addComponent(jButton2)
+                            .addComponent(jButton3))
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(txt_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton4)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txt_celular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txt_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(txt_sueldo_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton4)
-                .addGap(30, 30, 30)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txt_estatus_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addComponent(label_status)
-                .addContainerGap())
+                .addGap(129, 129, 129))
         );
 
         pack();
@@ -175,23 +189,25 @@ public class MantenimientoEmpleados extends javax.swing.JFrame {
         //Codigo que permite insertar registros en al base de datos
         try{
                   //local host y el nombre de la base de datos y la contraseña
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/bd_ins", "root", "Cagada1234");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/Planilla_Bd", "root", "Cagada1234");
             //Esto permitirá el insert
-            PreparedStatement pst = cn.prepareStatement("insert into estudiantes values(?,?,?,?,?)");
+            PreparedStatement pst = cn.prepareStatement("insert into empleado_7690 values(?,?,?,?,?,?)");
             //El primer parametro de cada setString es cada ?
             
-            pst.setString(1, txt_ID.getText().trim());
-            pst.setString(2, txt_nombre.getText().trim());
-            pst.setString(3, txt_correo.getText().trim());
-            pst.setString(4, txt_edad.getText().trim());
-            pst.setString(5, txt_celular.getText().trim());
+            pst.setString(1, txt_codigo_empleado.getText().trim());
+            pst.setString(2, txt_nombre_empleado.getText().trim());
+            pst.setString(3, txt_codigo_puesto.getText().trim());
+            pst.setString(4, txt_codigo_departamento.getText().trim());
+            pst.setString(5, txt_sueldo_empleado.getText().trim());
+            pst.setString(6, txt_estatus_empleado.getText().trim());
             pst.executeUpdate();
             
-            txt_nombre.setText("");
-            txt_ID.setText("");
-            txt_correo.setText("");
-            txt_edad.setText("");
-            txt_celular.setText("");
+            txt_nombre_empleado.setText("");
+            txt_codigo_empleado.setText("");
+            txt_codigo_puesto.setText("");
+            txt_codigo_departamento.setText("");
+            txt_sueldo_empleado.setText("");
+            txt_estatus_empleado.setText("");
             label_status.setText("Registro exitoso.");
         }catch (Exception e){
             
@@ -203,9 +219,9 @@ public class MantenimientoEmpleados extends javax.swing.JFrame {
         //Codigo que permite consultar registros en la base de datos
         try{
             //local host y el nombre de la base de datos y la contraseñña
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/bd_ins", "root", "Cagada1234");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/Planilla_Bd", "root", "Cagada1234");
             //Esto permitirá el buscar registro a traves del ID
-            PreparedStatement pst = cn.prepareStatement("select * from estudiantes where ID_Estudiante = ?");
+            PreparedStatement pst = cn.prepareStatement("select * from empleado_7960 where codigo_empleado = ?");
             //El parametro 1 es de que solo un ? esta llenando y entra lo del txt
             pst.setString(1, txt_buscar.getText().trim());
             
@@ -213,11 +229,12 @@ public class MantenimientoEmpleados extends javax.swing.JFrame {
             ResultSet rs = pst.executeQuery();
             
             if(rs.next()){
-                txt_ID.setText(rs.getString("ID_Estudiante"));
-                txt_nombre.setText(rs.getString("NombreEstudiante"));
-                txt_correo.setText(rs.getString("CorreoEstudiante"));
-                txt_edad.setText(rs.getString("Edad"));
-                txt_celular.setText(rs.getString("Celular"));
+                txt_codigo_empleado.setText(rs.getString("codigo_empleado"));
+                txt_nombre_empleado.setText(rs.getString("nombre_empleado"));
+                txt_codigo_puesto.setText(rs.getString("codigo_puesto"));
+                txt_codigo_departamento.setText(rs.getString("codigo_departamento"));
+                txt_sueldo_empleado.setText(rs.getString("sueldo_empleado"));
+                txt_estatus_empleado.setText(rs.getString("estatus_empleado"));
                 
             } else {
                 JOptionPane.showMessageDialog(null, "Alumno no registrado.");
@@ -234,14 +251,16 @@ public class MantenimientoEmpleados extends javax.swing.JFrame {
         try {
             String ID = txt_buscar.getText().trim();
             
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/bd_ins", "root", "Cagada1234");
-            PreparedStatement pst = cn.prepareStatement("update estudiantes set ID_Estudiante = ?, NombreEstudiante = ?, CorreoEstudiante =?, Edad = ? , Celular = ? where ID_Estudiante = " + ID);
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/Planilla_Bd", "root", "Cagada1234");
+            PreparedStatement pst = cn.prepareStatement("update estudiantes set codigo_empleado = ?, nombre_empleado = ?, codigo_puesto =?, codigo_departamento = ? , "
+                    + "sueldo_empleado = ? , estatus_empleado where codigo_empleado = " + ID);
             
-            pst.setString(1, txt_ID.getText().trim());
-            pst.setString(2, txt_nombre.getText().trim());
-            pst.setString(3, txt_correo.getText().trim());
-            pst.setString(4, txt_edad.getText().trim());
-            pst.setString(5, txt_celular.getText().trim());
+            pst.setString(1, txt_codigo_empleado.getText().trim());
+            pst.setString(2, txt_nombre_empleado.getText().trim());
+            pst.setString(3, txt_codigo_puesto.getText().trim());
+            pst.setString(4, txt_codigo_departamento.getText().trim());
+            pst.setString(5, txt_sueldo_empleado.getText().trim());
+            pst.setString(6, txt_estatus_empleado.getText().trim());
             pst.executeUpdate();
             
             label_status.setText("Modificación exitosa.");
@@ -254,17 +273,18 @@ public class MantenimientoEmpleados extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         //Codigo que permite borrar registros en la base de datos
         try {
-             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/bd_ins", "root", "Cagada1234");
-            PreparedStatement pst = cn.prepareStatement("delete from estudiantes where ID_Estudiante = ?");
+             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/Planilla_Bd", "root", "Cagada1234");
+            PreparedStatement pst = cn.prepareStatement("delete from empleado_7960 where codigo_empleado = ?");
             
             pst.setString(1, txt_buscar.getText().trim());
             pst.executeUpdate();
             
-            txt_nombre.setText("");
-            txt_ID.setText("");
-            txt_correo.setText("");
-            txt_edad.setText("");
-            txt_celular.setText("");
+            txt_nombre_empleado.setText("");
+            txt_codigo_empleado.setText("");
+            txt_codigo_puesto.setText("");
+            txt_codigo_departamento.setText("");
+            txt_sueldo_empleado.setText("");
+            txt_estatus_empleado.setText("");
             txt_buscar.setText("");
             
             label_status.setText("Registro eliminado.");
@@ -274,9 +294,9 @@ public class MantenimientoEmpleados extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void txt_edadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_edadActionPerformed
+    private void txt_codigo_departamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_codigo_departamentoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_edadActionPerformed
+    }//GEN-LAST:event_txt_codigo_departamentoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -325,12 +345,14 @@ public class MantenimientoEmpleados extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel label_status;
-    private javax.swing.JTextField txt_ID;
     private javax.swing.JTextField txt_buscar;
-    private javax.swing.JTextField txt_celular;
-    private javax.swing.JTextField txt_correo;
-    private javax.swing.JTextField txt_edad;
-    private javax.swing.JTextField txt_nombre;
+    private javax.swing.JTextField txt_codigo_departamento;
+    private javax.swing.JTextField txt_codigo_empleado;
+    private javax.swing.JTextField txt_codigo_puesto;
+    private javax.swing.JTextField txt_estatus_empleado;
+    private javax.swing.JTextField txt_nombre_empleado;
+    private javax.swing.JTextField txt_sueldo_empleado;
     // End of variables declaration//GEN-END:variables
 }
